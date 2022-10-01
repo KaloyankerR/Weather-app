@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Stats{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="stats">
+        <h1>Data for sensor in {{ city }}</h1><br>
+
+        <div class="row">
+            {% for key in data.keys() %}
+            <div class="col">
+                <h2>{{ key }}</h2>
+                <h2>{{ data[key] }}</h2>
+            </div>
+            {% endfor %}
+        </div>
+        <h2>Link: <a href="{{ link }}">Link</a></h2>
+    </div>
+</div>
+
+<form action="/" style="text-align: center; margin-top: 2%;">
+    <button style="background-color: #a77db4; color: white;" class="btn btn-warning btn-lg">
+        Back
+    </button>
+</form>
+{% endblock %}

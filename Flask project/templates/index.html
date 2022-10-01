@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div style="color: white; margin-bottom: 4%;">
+        <h2>Monitoring 2001</h2>
+        <h3>Monitor your greenhouses around different cities</h3>
+        <h5>Choose the greenhouse you want to see</h5>
+    </div>
+
+    <form action="#" method="post">
+        <select class="form-select form-select-lg mb-2" name="city" aria-label="Default select example">
+            <option value="Amsterdam">Amsterdam</option>
+            <option value="Eindhoven">Eindhoven</option>
+            <option value="Breda">Breda</option>
+            <option value="Utrecht">Utrecht</option>
+            <option value="Groningen">Groningen</option>
+        </select><br>
+
+        <button style="background-color: #eeeeee; color: black;" type="submit"
+            class="btn btn-success btn-lg mb-3">Submit</button>
+    </form>
+
+    <form action="/update" method="post">
+        <button style="background-color: #a77db4; color: white;" type="submit"
+            class="btn btn-warning btn-lg">Update</button>
+    </form>
+
+    <!-- <h1>Latest sensor data</h1>
+    <h1>Statistics for all sensors</h1>
+    <h1>Statistics per sensor</h1>
+    <p>Sensor 069</p> -->
+</div>
+{% endblock %}
